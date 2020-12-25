@@ -3,7 +3,7 @@ img_path=/ChromeOS/chromeos.img <change this line if you installed at different 
 search --no-floppy --set=root --file $img_path
 loopback loop $img_path
 linux (loop,7)/kernel boot=local noresume noswap loglevel=7 disablevmx=off \
-	cros_secure cros_debug console=vt.global_cursor_default=0 brunch_bootsplash=default enforce_hyperthreading=1 options=ipts,enable_updates,advanced_als loop.max_part=16 img_part=$img_part img_path=$img_path
+	cros_secure cros_debug console=vt.global_cursor_default=0 brunch_bootsplash=default options=ipts,enable_updates,advanced_als loop.max_part=16 img_part=$img_part img_path=$img_path
 initrd (loop,7)/lib/firmware/amd-ucode.img (loop,7)/lib/firmware/intel-ucode.img (loop,7)/initramfs.img
 
 ###WARNING: This line and below, and all "<>" above must be deleted before you copy into GRUB config file.###
