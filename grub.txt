@@ -8,4 +8,7 @@ initrd (loop,7)/lib/firmware/amd-ucode.img (loop,7)/lib/firmware/intel-ucode.img
 
 ###WARNING: DO NOT COPY THIS LINE AND BELOW!!! Also delete all the "<>" above.###
 ###Add "rmmod tpm" above the "img_part" line if you're using Linux Mint or Ubuntu's GRUB. Grub2Win does not need this.###
-###"a" in "/dev/sdaX" means "Disk 0" (except for NVMe drive), "X" is the sequence number of your partition, e.g. "sda4" if your install partition is 4th partition of the disk 0. The first "X" in "nvmeXnXpX" means "slot X", secone "X" is "disk X", and third "X" is "partition X", e.g. "nvme0n1p7" means "NVMe slot 0, disk 1, partition 7". Partition name could be very difficult to identify. You can use GParted (or other partition tools) on Linux distribution to determine which partition name you should input. "diskpart" in Windows and partition info listed in Grub2Win are very hard to identify if you're inexperienced of if you have multiple disks in your device.###
+###"a" in "/dev/sdaX" means "Disk 0" (except for NVMe drive), "X" is the sequence number of your partition, e.g. "sda4" if your install partition is 4th partition of the disk 0. 
+The 3 "X"s in "nvmeXnXpX" means "nvme slot X, disk X, partition X", e.g. "nvme0n1p7" means "NVMe slot 0, disk 1, partition 7".
+Partition name could be very difficult to identify. You can use GParted (or other partition tools) on Linux distribution to determine which partition name you should input. 
+"diskpart" in Windows and partition info listed in Grub2Win are very hard to identify if you're inexperienced of if you have multiple disks in your device.###
